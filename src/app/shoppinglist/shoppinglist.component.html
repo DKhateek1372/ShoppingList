@@ -1,0 +1,18 @@
+<section>
+  <div>
+    <app-shoppinglistnewitem></app-shoppinglistnewitem>
+  </div>
+</section>
+<section>
+  <h3> My List</h3>
+  <div class="list">
+    <ul>
+      <li *ngFor="let listItem of listItems " (click)="onselect(listItem)">
+        {{listItem.name}}  ({{listItem.Amount}})
+      </li>
+    </ul>
+  </div>
+</section>
+<section *ngIf="selectedItem != null">
+  <app-shoppinglistitem [item]="selectedItem" (removed)="onRemove()"></app-shoppinglistitem>
+</section>

@@ -1,0 +1,9 @@
+<div class="input">
+    <label for="item-name">name</label>
+    <input type="text" name="item1" [(ngModel)]="item.name">
+  </div>
+  <div class="input">
+    <label for="item-amount">amount</label>
+    <input type="text" name="item2" [(ngModel)]="item.amount">
+  </div>
+  <button class="danger" type="button" (click)="onDelete()">deleteItems</button>
